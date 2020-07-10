@@ -260,7 +260,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		System.out.print("과목평균:\t|");
 		float avgAndAvg = 0f;
 		for(int sum : totalSum) {
-			float avg = (float)sum / totalSum.length;
+			float avg = (float)sum / scoreList.size();
 			System.out.printf("%5.2f\t|",avg);
 			avgAndAvg += avg;
 		}
@@ -290,7 +290,6 @@ public class ScoreServiceImplV1 implements ScoreService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	@Override
